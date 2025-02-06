@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROD PORT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styles */
         * {
@@ -13,19 +14,13 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Orbitron', sans-serif;
-            color: white;
-            background: #0c0c0c;
-            overflow: hidden;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #f0f0f0;
+            text-align: center;
+            overflow-x: hidden;
+            background: linear-gradient(45deg, #1e3c72, #2a5298); /* Blue gradient */
+            line-height: 1.6;
         }
-        /* Main Layout */
-        .main-container {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
-
         /* Background Video */
         .background-video {
             position: fixed;
@@ -35,114 +30,135 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            filter: blur(5px) brightness(0.3);
+            filter: blur(5px) brightness(0.4);
         }
-
         /* Header */
         header {
-            padding: 20px;
-            font-size: 3rem;
+            padding: 30px;
+            font-size: 3.5rem;
             font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            text-align: center;
-            color: #ff4d4d;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 20px;
-            width: 45%;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
-            margin-bottom: 20px;
-        }
-        
-        h2, h3 {
-            color: #ffb84d;
-        }
-
-        p {
-            color: #dcdcdc;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .audio-player {
-            width: 100%;
-            border-radius: 10px;
-            background: #ff4d4d;
-        }
-
-        .track-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .track-item {
-            width: 48%;
-            background: #333333;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-        }
-
-        .track-item:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #222222;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             margin-top: 20px;
         }
-
-        footer p, footer a {
-            font-size: 1rem;
-            color: #dcdcdc;
-        }
-
-        footer a {
-            color: #ff4d4d;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            color: #ffb84d;
-        }
-
-        .tools-section, .about-me {
-            width: 45%;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
+        /* Page Content */
+        section {
+            padding: 25px;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 1000px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
         }
-
-        /* Key Ingredients Section */
-        .ingredients-section {
-            width: 45%;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
-            margin-bottom: 20px;
-        }
-
-        .ingredients-section h2 {
-            color: #ffb84d;
-        }
-
-        .ingredient {
-            font-size: 1.1rem;
-            color: #dcdcdc;
+        h2, h3 {
             margin-bottom: 10px;
+            font-size: 2rem;
+            color: #ff7b7b; /* Bright Red for headings */
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #f0f0f0;
+        }
+        a {
+            color: #ff7b7b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Audio Player */
+        audio {
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        audio::-webkit-media-controls-enclosure {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+        .project-list li {
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Hover effects */
+        .project-list li:hover {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transform: translateY(-5px);
+        }
+        /* Footer and small sections */
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #f0f0f0;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .footer-links a {
+            color: #ff7b7b;
+            font-size: 1.1rem;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        /* Contact Section */
+        .contact-section {
+            margin-top: 30px;
+        }
+        .contact-section h3 {
+            color: #ff7b7b;
+            font-size: 1.8rem;
+        }
+        .contact-section p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        /* Tools Section */
+        .tools-section, .ingredients-section, .filler-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .tools-section h3, .ingredients-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ff7b7b;
+        }
+        .tools-section p, .ingredients-section p {
+            margin: 5px 0;
+            color: #f0f0f0;
+        }
+        /* 5 Key Ingredients to Music Production Section */
+        .ingredients-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #f0f0f0;
+        }
+        .ingredients-section li {
+            margin-bottom: 10px;
+        }
+        /* Filler Features */
+        .filler-section {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -158,104 +174,138 @@
         PROD PORT
     </header>
 
-    <!-- Main Container -->
-    <div class="main-container">
-        <!-- Tracks Section -->
-        <section>
-            <h2>PROD Portfolio</h2>
-            <div class="track-list">
-                <!-- Repeat this for each track -->
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track1.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track2.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track3.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track4.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track5.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track6.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track7.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track8.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track9.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="track-item">
-                    <h3>The next one sound nothing alike</h3>
-                    <audio controls class="audio-player">
-                        <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track10.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-            </div>
-        </section>
+    <!-- About Me Section -->
+    <section>
+        <h2>About Me</h2>
+        <p>Christon, 18 Year Old Producer & Hip Hop Artist from Birmingham, Alabama. Started writing songs around the age of 8 and hasn't stopped since. As of now, every song he's released has only been produced by him. Even while going completely overlooked, he's continued to go at it 110%.</p>
+    </section>
 
-        <!-- About Me Section -->
-        <section class="about-me">
-            <h2>About Me</h2>
-            <p>Christon, 18 Year Old Producer & Hip Hop Artist from Birmingham, Alabama. Started writing songs around the age of 8 and hasn't stopped since. As of now, every song he's released has only been produced by him. Even while going completely overlooked, he's continued to go at it 110%.</p>
-        </section>
-    </div>
+    <!-- Beat Portfolio Section -->
+    <section>
+        <h2>Prod Portfolio</h2>
+        <ul class="project-list">
+            <!-- Track 1 -->
+            <li>
+                <h3>Track 1</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <!-- Track 2 -->
+            <li>
+                <h3>Track 2</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <!-- Track 3 -->
+            <li>
+                <h3>Track 3</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <!-- Track 4 -->
+            <li>
+                <h3>Track 4</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track4.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <!-- Track 5 -->
+            <li>
+                <h3>Track 5</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track5.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <!-- Track 6 -->
+            <li>
+                <h3>Track 6</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track6.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <!-- Track 7 -->
+            <li>
+                <h3>Track 7</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track7.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <!-- Track 8 -->
+            <li>
+                <h3>Track 8</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track8.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <!-- Track 9 -->
+            <li>
+                <h3>Track 9</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track9.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <!-- Track 10 -->
+            <li>
+                <h3>Track 10</h3>
+                <audio controls>
+                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track10.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+        </ul>
+    </section>
 
-    <!-- Key Ingredients Section -->
-    <div class="ingredients-section">
-        <h2>5 Key Ingredients to Music Production</h2>
-        <div class="ingredient">1. Inspiration from personal experiences and emotions.</div>
-        <div class="ingredient">2. A solid understanding of rhythm and melody.</div>
-        <div class="ingredient">3. Experimentation with sound design and mixing techniques.</div>
-        <div class="ingredient">4. The ability to collaborate and learn from others.</div>
-        <div class="ingredient">5. Consistency and dedication to continuous improvement.</div>
-    </div>
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <h3>Tools & Software I Use</h3>
+        <p><strong>FL Studio</strong> - My DAW of choice.</p>
+        <p><strong>Roland Plugins</strong> - Essential for my sound.</p>
+        <p><strong>3k Drumkit</strong> by Whatswrongchase - My go-to kit.</p>
+        <p><strong>Windows Computer</strong> - My platform for production.</p>
+    </section>
 
-    <!-- Footer -->
+    <!-- 5 Key Ingredients to Music Production -->
+    <section class="ingredients-section">
+        <h3>5 Key Ingredients to Music Production</h3>
+        <ul>
+            <li><strong>Sound Selection</strong> - Choose the right instruments to build the foundation of your track.</li>
+            <li><strong>Arrangement</strong> - Structure your song in a way that keeps the listener engaged.</li>
+            <li><strong>Mixing</strong> - Balance your sounds to make sure everything fits well together.</li>
+            <li><strong>Creativity</strong> - Don’t be afraid to try new things and push boundaries.</li>
+            <li><strong>Persistence</strong> - Keep working on your craft, every track is a learning experience.</li>
+        </ul>
+    </section>
+
+    <!-- Filler Section -->
+    <section class="filler-section">
+        <h3>Music Production Tips</h3>
+        <p>Remember to always stay true to your sound and experiment with different elements. The more you practice, the more unique your sound will become.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h3>Contact & Socials</h3>
+        <p>Email: <a href="mailto:your-email@example.com">softparish@gmail.com</a></p>
+        <p>Follow me on Socials:</p>
+        <div class="footer-links">
+            <a href="https://twitter.com/christonwords" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/christonwords" target="_blank">Instagram</a>
+        </div>
+    </section>
+
+    <!-- Footer with Streaming Links -->
     <footer>
         <div class="footer-links">
             <a href="https://open.spotify.com/artist/6LgDkSbPafoOa0Yl5HlIjG?si=HL6w7KlYRDitMolRIsBrjQ" target="_blank">Spotify</a>
