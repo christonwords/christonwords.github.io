@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>christon prod port</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dorsa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         * {
@@ -14,7 +14,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Frijole', Arial, sans-serif;
+            font-family: 'Dorsa', Arial, sans-serif;
             color: white;
             text-align: center;
             overflow-x: hidden;
@@ -31,13 +31,14 @@
             z-index: -1;
             filter: blur(5px) brightness(0.3);
         }
-        /* Page Content */
+        /* Header */
         header {
             padding: 20px;
             font-size: 3rem;
             font-weight: bold;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 1);
+            text-shadow: none;
         }
+        /* Page Content */
         section {
             padding: 20px;
             margin: 50px auto;
@@ -84,7 +85,7 @@
             width: 100%;
             outline: none;
             border-radius: 5px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
         }
         audio::-webkit-media-controls-enclosure {
             background: rgba(255, 255, 255, 0.1);
@@ -101,29 +102,42 @@
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
-
-        /* Sidebar Styling */
-        .sidebar {
-            position: fixed;
-            top: 100px;
-            right: 0;
-            width: 250px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        /* Hover effects */
+        .project-list li:hover {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
-        .sidebar h3 {
+        /* Footer and small sections */
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .footer-links a {
             color: #ff4d4d;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.1rem;
         }
-        .sidebar ul {
-            color: white;
-            list-style: none;
-            font-size: 1rem;
-            line-height: 1.8;
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        /* Section with Tools */
+        .tools-section {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .tools-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .tools-section p {
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -139,112 +153,61 @@
         christon prod port
     </header>
 
-    <!-- Section: Beat of the Day -->
+    <!-- About Me Section -->
     <section>
-        <h2>Beat of the Day</h2>
-        <h3>Featured Track: Daily Vibes</h3>
-        <audio controls>
-            <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/dailybeat.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <h2>About Me</h2>
+        <p>Christon, 18 Year Old Producer & Hip Hop Artist from Birmingham, Alabama. Started writing songs around the age of 8 and hasn't stopped since. As of now, every song he's released has only been produced by him. Even while going completely overlooked, he's continued to go at it 110%.</p>
     </section>
 
-    <!-- Section: Music Portfolio -->
+    <!-- Beat Portfolio Section -->
     <section>
         <h2>Beat Portfolio</h2>
         <ul class="project-list">
+            <!-- Track List -->
             <li>
-                <h3>Track 1: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
+                <h3>Track 1</h3>
+                <audio controls>
                     <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track1.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 2: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
+                <h3>Track 2</h3>
+                <audio controls>
                     <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track2.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
+            <!-- Add all tracks here as needed -->
             <li>
-                <h3>Track 3: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
+                <h3>Track 3</h3>
+                <audio controls>
                     <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track3.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
-            <li>
-                <h3>Track 4: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
-                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track4.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 5: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
-                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track5.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 6: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
-                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track6.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 7: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
-                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track7.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 8: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
-                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track8.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 9: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
-                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track9.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 10: The next one will sound nothing like this</h3>
-                <audio controls controlslist="nodownload">
-                    <source src="https://github.com/christonwords/christonwords.github.io/releases/download/v1.0.0/track10.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
+            <!-- Repeat for Tracks 4-10 -->
         </ul>
     </section>
 
-    <!-- Sidebar: 5 Key Ingredients to Music Production -->
-    <div class="sidebar">
-        <h3>5 Key Ingredients to Music Production</h3>
-        <ul>
-            <li><strong>1. Creativity:</strong> The spark that drives every song. It can come from anywhere.</li>
-            <li><strong>2. Sound Design:</strong> Crafting the perfect sounds that express the right mood and feel.</li>
-            <li><strong>3. Arrangement:</strong> Organizing your sounds in a way that keeps the listener engaged.</li>
-            <li><strong>4. Mixing:</strong> Balancing and adjusting the audio elements so everything sounds clear and professional.</li>
-            <li><strong>5. Mastering:</strong> The final touch to ensure the track sounds great on all platforms and devices.</li>
-        </ul>
-    </div>
-
-    <!-- Section: Contact -->
-    <section>
-        <h2>Contact</h2>
-        <p>Email me: <a href="mailto:christonmusic1@gmail.com">christonmusic1@gmail.com</a></p>
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <h3>Tools & Software I Use</h3>
+        <p><strong>FL Studio</strong> - My DAW of choice.</p>
+        <p><strong>Roland Plugins</strong> - Essential for my sound.</p>
+        <p><strong>3k Drumkit</strong> by Whatswrongchase - My go-to kit.</p>
+        <p><strong>Windows Computer</strong> - My platform for production.</p>
     </section>
 
-    <!-- Section: Socials -->
+    <!-- Footer with Socials and Streaming Links -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://open.spotify.com/artist/6LgDkSbPafoOa0Yl5HlIjG?si=HL6w7KlYRDitMolRIsBrjQ" target="_blank">Spotify</a>
+            <a href="https://music.apple.com/us/artist/christon/1782316214" target="_blank">Apple Music</a>
+        </div>
+    </footer>
+
+    <!-- Social Media Links -->
     <section>
         <h2>Connect with Me</h2>
         <div class="socials">
