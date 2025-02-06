@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>christon production port </title>
+    <title>christon prod port</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         * {
@@ -54,7 +53,7 @@
             margin-bottom: 20px;
         }
         a {
-            color: #1db954;
+            color: #ff4d4d;
             text-decoration: none;
             font-weight: bold;
         }
@@ -72,17 +71,22 @@
             font-size: 1.5rem;
         }
         .socials i {
-            color: #1db954;
+            color: #ff4d4d;
             transition: transform 0.3s ease, color 0.3s ease;
         }
         .socials i:hover {
             transform: scale(1.2);
-            color: #1ed760;
+            color: #ff6666;
         }
         /* Audio Player */
         audio {
             width: 100%;
             outline: none;
+            border-radius: 5px;
+        }
+        audio::-webkit-media-controls-enclosure {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
         }
         .project-list {
             list-style: none;
@@ -106,150 +110,90 @@
 
     <!-- Header -->
     <header>
-        Christon Production Port
+        christon prod port
     </header>
+
+    <!-- Section: Beat of the Day -->
+    <section>
+        <h2>Beat of the Day</h2>
+        <h3>Featured Track: Daily Vibes</h3>
+        <audio controls>
+            <source src="dailybeat.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
 
     <!-- Section: Music Portfolio -->
     <section>
-        <h2>Music Portfolio</h2>
+        <h2>Beat Portfolio</h2>
         <ul class="project-list">
             <li>
-                <h3>Track 1: Infinite Vibes</h3>
-                <audio controls>
+                <h3>Track 1: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track1.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 2: Chill Beats</h3>
-                <audio controls>
+                <h3>Track 2: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track2.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 3: Urban Flow</h3>
-                <audio controls>
+                <h3>Track 3: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track3.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 4: Midnight Drive</h3>
-                <audio controls>
+                <h3>Track 4: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track4.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 5: Lo-Fi Chill</h3>
-                <audio controls>
+                <h3>Track 5: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track5.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 6: Street Lights</h3>
-                <audio controls>
+                <h3>Track 6: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track6.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 7: Deep Bass</h3>
-                <audio controls>
+                <h3>Track 7: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track7.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 8: Rhythm in Motion</h3>
-                <audio controls>
+                <h3>Track 8: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track8.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 9: Hypnotic Beats</h3>
-                <audio controls>
+                <h3>Track 9: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track9.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
             <li>
-                <h3>Track 10: Cosmic Flow</h3>
-                <audio controls>
+                <h3>Track 10: The next one will sound nothing like this</h3>
+                <audio controls controlslist="nodownload">
                     <source src="track10.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 11: Dream State</h3>
-                <audio controls>
-                    <source src="track11.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 12: Vintage Vibes</h3>
-                <audio controls>
-                    <source src="track12.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 13: Energy Rush</h3>
-                <audio controls>
-                    <source src="track13.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 14: Groove Master</h3>
-                <audio controls>
-                    <source src="track14.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 15: Pure Sound</h3>
-                <audio controls>
-                    <source src="track15.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 16: Beat Story</h3>
-                <audio controls>
-                    <source src="track16.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 17: Acoustic Fusion</h3>
-                <audio controls>
-                    <source src="track17.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 18: Space Drift</h3>
-                <audio controls>
-                    <source src="track18.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 19: Elevate</h3>
-                <audio controls>
-                    <source src="track19.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-            <li>
-                <h3>Track 20: Limitless</h3>
-                <audio controls>
-                    <source src="track20.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </li>
